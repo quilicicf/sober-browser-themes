@@ -1,0 +1,8 @@
+node_modules/
+.npm
+.eslintcache
+.idea
+*.iml
+
+# The place where all the themes get built
+/dist/

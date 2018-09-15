@@ -25,6 +25,8 @@
   "devDependencies": {
     "color": "3.0.0",
     "deepmerge": "2.1.1",
-    "lodash": "4.17.11"
+    "lodash": "4.17.11",
+    "ls": "0.2.1",
+    "puppeteer-core": "1.8.0"
   }
 }

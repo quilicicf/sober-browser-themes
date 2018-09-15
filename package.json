@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/quilicicf/ChromeSoberThemes#readme",
   "devDependencies": {
+    "color": "3.0.0",
     "deepmerge": "2.1.1",
     "lodash": "4.17.11"
   }

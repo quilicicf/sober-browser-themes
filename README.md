@@ -43,6 +43,7 @@ The chrome profile picture being way too small, using theme is a nice solution.
 * sober:
   * no shading
   * no picture as background of home page
+* clear: active tab must stand out
 * dark: for use with the excellent [Dark reader](https://darkreader.org/) I find it's a must
 * with color variations: to easily tell the profiles apart
 

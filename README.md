@@ -55,8 +55,8 @@ I created a simple theme that looks a lot like [Morpheon dark](https://chrome.go
 
 ## TODO list
 
+* [x]: Release to the Chrome store
 * [ ]: Write release script
-* [ ]: Release to the Chrome store
 * [ ]: Automatize the release process
 
 ## Want to fiddle with it?

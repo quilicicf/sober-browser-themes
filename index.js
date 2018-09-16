@@ -3,9 +3,10 @@
 const _ = require('lodash');
 const deepmerge = require('deepmerge');
 const bufferReplace = require('buffer-replace');
+const svg2png = require('svg2png');
+const zipper = require('zip-dir');
 const { execSync } = require('child_process');
 const { resolve } = require('path');
-const svg2png = require('svg2png');
 const { readFile, writeFile } = require('pn/fs');
 const { writeFileSync, mkdirSync, existsSync } = require('fs');
 
@@ -50,6 +51,19 @@ const mkdirIfAbsent = (path) => {
   mkdirSync(path);
 };
 
+const zipTheme = (colorName, targetFolder) => {
+  const zipOptions = { saveTo: resolve(targetFolder, `chrome-sober-${colorName}-${package.version}.zip`) };
+
+  return new Promise((resolve, reject) => {
+    zipper(targetFolder, zipOptions, (error) => {
+      if (error) {
+        return reject(error);
+      }
+      return resolve();
+    });
+  })
+};
+
 const writeInDist = async ({ colorName, colorHex, manifest }) => {
   const targetFolder = resolve(DIST_FOLDER, `chrome-sober-${manifest.colorName}-theme`);
   execSync(`rm -rf ${targetFolder}`);
@@ -59,6 +73,7 @@ const writeInDist = async ({ colorName, colorHex, manifest }) => {
   writeFileSync(targetManifestPath, JSON.stringify(manifest, null, 2), 'utf8');
 
   await generateIcons(colorHex, targetFolder);
+  await zipTheme(colorName, targetFolder);
 };
 
 mkdirIfAbsent(DIST_FOLDER);

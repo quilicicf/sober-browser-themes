@@ -4,7 +4,8 @@
 
 <!-- TOC START min:2 max:4 link:true update:true -->
 - [What is this?](#what-is-this)
-  - [Other variations](#other-variations)
+  - [All variations](#all-variations)
+- [Chrome requirements](#chrome-requirements)
 - [Why?](#why)
 - [Requirements](#requirements)
 - [Solution](#solution)
@@ -19,18 +20,22 @@ This is a repository containing the source code for the creation of the sober da
 
 They look like this:
 
-![Orange variation](./docs/images/sober-dark-orange-overview.png)
+![Blue variation](./docs/images/sober-dark-blue-overview_small.jpg)
 
-### Other variations
+### All variations
 
-* [Red](./docs/images/sober-dark-red-overview.png)
-* [Green](./docs/images/sober-dark-green-overview.png)
-* [Blue](./docs/images/sober-dark-blue-overview.png)
-* [Yellow](./docs/images/sober-dark-yellow-overview.png)
-* [Orange](./docs/images/sober-dark-orange-overview.png)
-* [Purple](./docs/images/sober-dark-purple-overview.png)
-* [Steel](./docs/images/sober-dark-steel-overview.png)
-* [Pink](./docs/images/sober-dark-pink-overview.png)
+* Red: [Screenshot](./docs/images/sober-dark-red-overview.png) | [Chrome store link](https://chrome.google.com/webstore/detail/sober-dark-red/gfgeiigojblecjnfnldmmllcgcehjnbn)
+* Green: [Screenshot](./docs/images/sober-dark-green-overview.png) | [Chrome store link](https://chrome.google.com/webstore/detail/sober-dark-green/necamokhombbnmeppbamhpehidknemmn)
+* Blue: [Screenshot](./docs/images/sober-dark-blue-overview.png) | [Chrome store link](https://chrome.google.com/webstore/detail/sober-dark-blue/enmlfpdgmgdklooblhdiebljnoappppd)
+* Yellow: [Screenshot](./docs/images/sober-dark-yellow-overview.png) | [Chrome store link](https://chrome.google.com/webstore/detail/sober-dark-yellow/ccpeaemokpnhbakiakpagpfbdciippgd)
+* Orange: [Screenshot](./docs/images/sober-dark-orange-overview.png) | [Chrome store link](https://chrome.google.com/webstore/detail/sober-dark-orange/edlmpfoknljlbkacifdhobhfkpkmimoj)
+* Purple: [Screenshot](./docs/images/sober-dark-purple-overview.png) | [Chrome store link](https://chrome.google.com/webstore/detail/sober-dark-purple/kccbjmbbfhipiopncjjbmcbcmeedbhmp)
+* Steel: [Screenshot](./docs/images/sober-dark-steel-overview.png) | [Chrome store link](https://chrome.google.com/webstore/detail/sober-dark-steel/gpdhdegbjmloegcnmkjniljppajbnmdk)
+* Pink: [Screenshot](./docs/images/sober-dark-pink-overview.png) | [Chrome store link](https://chrome.google.com/webstore/detail/sober-dark-pink/agnmpjjinbbjkkfndiokoiilgbklleon)
+
+## Chrome requirements
+
+Developed and tested on Chrome version 69, there are no guarantees that it looks good in earlier versions.
 
 ## Why?
 

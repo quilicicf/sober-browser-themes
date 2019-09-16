@@ -1,86 +1,47 @@
 #!/usr/bin/env node
 
 const _ = require('lodash');
-const deepmerge = require('deepmerge');
-const bufferReplace = require('buffer-replace');
-const svg2png = require('svg2png');
-const zipper = require('zip-dir');
-const { execSync } = require('child_process');
-const { resolve } = require('path');
-const { readFile, writeFile } = require('pn/fs');
-const { writeFileSync, mkdirSync, existsSync } = require('fs');
+const { resolve: resolvePath } = require('path');
+const { writeFileSync } = require('fs');
 
-const package = require('./package');
+const packageFile = require('./package');
 
-const { VARIATIONS } = require('./lib/variations');
-const manifestTemplate = require('./lib/manifest-template');
+const zipTheme = require('./lib/zipTheme');
+const generateIcons = require('./lib/generateIcons');
+const reCreateDir = require('./lib/reCreateDir');
+const getVariations = require('./lib/getVariations');
+const { DIST_FOLDER } = require('./lib/constants');
 
-const DIST_FOLDER = resolve(__dirname, 'dist');
-const RAW_ICON_FOLDER = resolve(__dirname, 'lib', 'material_design_camera.svg');
-const ICONS_SIZES = [ 16, 48, 128 ];
+const generateFirefoxManifest = require('./lib/firefox/generateFirefoxManifest');
+const generateChromeManifest = require('./lib/chrome/generateChromeManifest');
 
-const generateManifest = (manifestPatcher) => (
-  deepmerge.all([
-    manifestTemplate,
-    manifestPatcher,
-    { version: package.version }
-  ])
-);
+const writeInDist = async ({ colorName, hexColor, chromeManifest, firefoxManifest }) => {
+  const promises = _(
+    [
+      { folderName: `chrome-sober-${colorName}-theme`, manifest: chromeManifest, shouldAddIcons: true },
+      { folderName: `firefox-sober-${colorName}-theme`, manifest: firefoxManifest, shouldAddIcons: false },
+    ])
+    .map(({ folderName, manifest, shouldAddIcons }) => {
+      const targetFolderPath = resolvePath(DIST_FOLDER, folderName);
+      reCreateDir(targetFolderPath);
+      const targetManifestPath = resolvePath(targetFolderPath, 'manifest.json');
+      writeFileSync(targetManifestPath, JSON.stringify(manifest, null, 2), 'utf8');
 
-const generateIcons = async (colorHex, targetFolder) => {
-  const iconsPromises = _.map(ICONS_SIZES, (size) => (
-    readFile(RAW_ICON_FOLDER)
-      .then(svgIconBuffer => {
-        const replacedBuffer = bufferReplace(svgIconBuffer, '#000000', colorHex);
-        return svg2png(replacedBuffer, { width: size, height: size });
-      })
-      .then(pngIconBuffer => writeFile(resolve(targetFolder, `icon-${size}.png`), pngIconBuffer))
-      .catch(error => {
-        throw error;
-      })
-  ));
+      const iconsGenerator = shouldAddIcons ? generateIcons(hexColor, targetFolderPath) : Promise.resolve();
+      return iconsGenerator.then(() => zipTheme(colorName, targetFolderPath, packageFile.version));
+    })
+    .flatten()
+    .value();
 
-  return Promise.all(iconsPromises);
+  return Promise.all(promises);
 };
 
-const mkdirIfAbsent = (path) => {
-  if (existsSync(path)) {
-    return;
-  }
+reCreateDir(DIST_FOLDER);
 
-  mkdirSync(path);
-};
-
-const zipTheme = (colorName, targetFolder) => {
-  const zipOptions = { saveTo: resolve(targetFolder, `chrome-sober-${colorName}-${package.version}.zip`) };
-
-  return new Promise((resolve, reject) => {
-    zipper(targetFolder, zipOptions, (error) => {
-      if (error) {
-        return reject(error);
-      }
-      return resolve();
-    });
-  })
-};
-
-const writeInDist = async ({ colorName, colorHex, manifest }) => {
-  const targetFolder = resolve(DIST_FOLDER, `chrome-sober-${manifest.colorName}-theme`);
-  execSync(`rm -rf ${targetFolder}`);
-  mkdirSync(targetFolder);
-
-  const targetManifestPath = resolve(targetFolder, 'manifest.json');
-  writeFileSync(targetManifestPath, JSON.stringify(manifest, null, 2), 'utf8');
-
-  await generateIcons(colorHex, targetFolder);
-  await zipTheme(colorName, targetFolder);
-};
-
-mkdirIfAbsent(DIST_FOLDER);
-_(VARIATIONS)
+_(getVariations(packageFile.version))
   .map(variation => ({
-    colorName: variation.colorName,
-    colorHex: variation.colorHex,
-    manifest: generateManifest(variation.manifestPatcher),
+    ...variation,
+    chromeManifest: generateChromeManifest(variation),
+    firefoxManifest: generateFirefoxManifest(variation),
   }))
   .each(builtVariation => writeInDist(builtVariation));

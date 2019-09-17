@@ -1,22 +1,33 @@
-# ChromeSoberThemes
+# sober-browser-themes
 
-> Chrome sober themes, with multiple colors to recognize your profiles at a glance
+> Sober browser themes, with multiple colors to recognize your profiles at a glance
 
 <!-- TOC START min:2 max:4 link:true update:true -->
-- [What is this?](#what-is-this)
-  - [All variations](#all-variations)
-- [Chrome requirements](#chrome-requirements)
-- [Why?](#why)
-- [Requirements](#requirements)
-- [Solution](#solution)
-- [TODO list](#todo-list)
-- [Want to fiddle with it?](#want-to-fiddle-with-it)
+
+* [What is this?](#what-is-this)
+
+  * [All variations](#all-variations)
+
+* [Browser requirements](#browser-requirements)
+
+* [Why?](#why)
+
+* [Requirements](#requirements)
+
+* [Solution](#solution)
+
+* [TODO list](#todo-list)
+
+* [Want to fiddle with it?](#want-to-fiddle-with-it)
+
+  * [Firefox](#firefox)
+  * [Chrome](#chrome)
 
 <!-- TOC END -->
 
 ## What is this?
 
-This is a repository containing the source code for the creation of the sober dark Chrome themes.
+This is a repository containing the source code for the creation of the sober dark themes, for Firefox and Chrome.
 
 They look like this:
 
@@ -24,24 +35,29 @@ They look like this:
 
 ### All variations
 
-* Red: [Screenshot](./docs/images/sober-dark-red-overview.png) | [Chrome store link](https://chrome.google.com/webstore/detail/sober-dark-red/gfgeiigojblecjnfnldmmllcgcehjnbn)
-* Green: [Screenshot](./docs/images/sober-dark-green-overview.png) | [Chrome store link](https://chrome.google.com/webstore/detail/sober-dark-green/necamokhombbnmeppbamhpehidknemmn)
-* Blue: [Screenshot](./docs/images/sober-dark-blue-overview.png) | [Chrome store link](https://chrome.google.com/webstore/detail/sober-dark-blue/enmlfpdgmgdklooblhdiebljnoappppd)
-* Yellow: [Screenshot](./docs/images/sober-dark-yellow-overview.png) | [Chrome store link](https://chrome.google.com/webstore/detail/sober-dark-yellow/ccpeaemokpnhbakiakpagpfbdciippgd)
-* Orange: [Screenshot](./docs/images/sober-dark-orange-overview.png) | [Chrome store link](https://chrome.google.com/webstore/detail/sober-dark-orange/edlmpfoknljlbkacifdhobhfkpkmimoj)
-* Purple: [Screenshot](./docs/images/sober-dark-purple-overview.png) | [Chrome store link](https://chrome.google.com/webstore/detail/sober-dark-purple/kccbjmbbfhipiopncjjbmcbcmeedbhmp)
-* Steel: [Screenshot](./docs/images/sober-dark-steel-overview.png) | [Chrome store link](https://chrome.google.com/webstore/detail/sober-dark-steel/gpdhdegbjmloegcnmkjniljppajbnmdk)
-* Pink: [Screenshot](./docs/images/sober-dark-pink-overview.png) | [Chrome store link](https://chrome.google.com/webstore/detail/sober-dark-pink/agnmpjjinbbjkkfndiokoiilgbklleon)
+| Color  | Firefox Screenshot | Firefox install link | Chrome Screenshot                                          | Chrome install link                                                                                               |
+| ------ | ------------------ | -------------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Red    |                    |                      | [Screenshot](./docs/images/sober-dark-red-overview.png)    | [Install link](https://chrome.google.com/webstore/detail/sober-dark-red/gfgeiigojblecjnfnldmmllcgcehjnbn)         |
+| Green  |                    |                      | [Screenshot](./docs/images/sober-dark-green-overview.png)  | [Chrome store link](https://chrome.google.com/webstore/detail/sober-dark-green/necamokhombbnmeppbamhpehidknemmn)  |
+| Blue   |                    |                      | [Screenshot](./docs/images/sober-dark-blue-overview.png)   | [Chrome store link](https://chrome.google.com/webstore/detail/sober-dark-blue/enmlfpdgmgdklooblhdiebljnoappppd)   |
+| Yellow |                    |                      | [Screenshot](./docs/images/sober-dark-yellow-overview.png) | [Chrome store link](https://chrome.google.com/webstore/detail/sober-dark-yellow/ccpeaemokpnhbakiakpagpfbdciippgd) |
+| Orange |                    |                      | [Screenshot](./docs/images/sober-dark-orange-overview.png) | [Chrome store link](https://chrome.google.com/webstore/detail/sober-dark-orange/edlmpfoknljlbkacifdhobhfkpkmimoj) |
+| Purple |                    |                      | [Screenshot](./docs/images/sober-dark-purple-overview.png) | [Chrome store link](https://chrome.google.com/webstore/detail/sober-dark-purple/kccbjmbbfhipiopncjjbmcbcmeedbhmp) |
+| Steel  |                    |                      | [Screenshot](./docs/images/sober-dark-steel-overview.png)  | [Chrome store link](https://chrome.google.com/webstore/detail/sober-dark-steel/gpdhdegbjmloegcnmkjniljppajbnmdk)  |
+| Pink   |                    |                      | [Screenshot](./docs/images/sober-dark-pink-overview.png)   | [Chrome store link](https://chrome.google.com/webstore/detail/sober-dark-pink/agnmpjjinbbjkkfndiokoiilgbklleon)   |
 
-## Chrome requirements
+## Browser requirements
 
-Developed and tested on Chrome version 69, there are no guarantees that it looks good in earlier versions.
+Developed and tested on Ubuntu and:
+
+* Firefox version 69
+* Chrome version 77
+
+There are no guarantees that it looks good in earlier versions.
 
 ## Why?
 
-For people who use Chrome profiles to work with multiple environments (pro, personal, chat, sensitive, ...), it's nice to have easily recognizable profiles.
-
-The chrome profile picture being way too small, using theme is a nice solution.
+For people who use browser profiles to work with multiple environments (pro, personal, chat, sensitive, ...), it's nice to have easily recognizable profiles.
 
 ## Requirements
 
@@ -60,20 +76,32 @@ I created a simple theme that looks a lot like [Morpheon dark](https://chrome.go
 
 ## TODO list
 
-* [x]: Release to the Chrome store
-* [ ]: Write release script
-* [ ]: Automatize the release process
+* [x]&#x3A; Release to the Chrome store
+* [ ]&#x3A; Release to Firefox's AMO
+* [ ]&#x3A; Write release script (requires taking screenshots, might never be done)
+* [ ]&#x3A; Automatize the release process
 
 ## Want to fiddle with it?
 
 You can build the themes to `./dist` with `npm run build`.
 
-Then you can try it by:
+Then you can install them that way.
 
-* opening `chrome://extensions`
-* checking the box `Developer mode`
-* selecting `Load unpacked extension`
-* selecting one of the variations folder in `./dist`
-* validating the choice
+### Firefox
 
-Chrome's doc on themes is [here](https://developer.chrome.com/extensions/themes).
+* Open [the debugging page](about:debugging#/runtime/this-firefox)
+* Click on `Load Temporary Add-on...`
+* Select the file `./dist/firefox-sober-{color}-theme/manifest.json`
+* Click on `Reload` each time you change the theme
+
+Checkout [Firefox's documentation on themes](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme).
+
+### Chrome
+
+* Open [the Chrome extensions page](chrome://extensions)
+* Check the box `Developer mode`
+* Select `Load unpacked extension`
+* Select one of the variations folder in `./dist/chrome-sober-{color}-theme`
+* Validate the choice
+
+Checkout [Chrome's doc on themes](https://developer.chrome.com/extensions/themes).

@@ -35,16 +35,16 @@ They look like this:
 
 ### All variations
 
-| Color  | Firefox Screenshot | Firefox install link | Chrome Screenshot                                          | Chrome install link                                                                                               |
-| ------ | ------------------ | -------------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| Red    |                    |                      | [Screenshot](./docs/images/sober-dark-red-overview.png)    | [Install link](https://chrome.google.com/webstore/detail/sober-dark-red/gfgeiigojblecjnfnldmmllcgcehjnbn)         |
-| Green  |                    |                      | [Screenshot](./docs/images/sober-dark-green-overview.png)  | [Chrome store link](https://chrome.google.com/webstore/detail/sober-dark-green/necamokhombbnmeppbamhpehidknemmn)  |
-| Blue   |                    |                      | [Screenshot](./docs/images/sober-dark-blue-overview.png)   | [Chrome store link](https://chrome.google.com/webstore/detail/sober-dark-blue/enmlfpdgmgdklooblhdiebljnoappppd)   |
-| Yellow |                    |                      | [Screenshot](./docs/images/sober-dark-yellow-overview.png) | [Chrome store link](https://chrome.google.com/webstore/detail/sober-dark-yellow/ccpeaemokpnhbakiakpagpfbdciippgd) |
-| Orange |                    |                      | [Screenshot](./docs/images/sober-dark-orange-overview.png) | [Chrome store link](https://chrome.google.com/webstore/detail/sober-dark-orange/edlmpfoknljlbkacifdhobhfkpkmimoj) |
-| Purple |                    |                      | [Screenshot](./docs/images/sober-dark-purple-overview.png) | [Chrome store link](https://chrome.google.com/webstore/detail/sober-dark-purple/kccbjmbbfhipiopncjjbmcbcmeedbhmp) |
-| Steel  |                    |                      | [Screenshot](./docs/images/sober-dark-steel-overview.png)  | [Chrome store link](https://chrome.google.com/webstore/detail/sober-dark-steel/gpdhdegbjmloegcnmkjniljppajbnmdk)  |
-| Pink   |                    |                      | [Screenshot](./docs/images/sober-dark-pink-overview.png)   | [Chrome store link](https://chrome.google.com/webstore/detail/sober-dark-pink/agnmpjjinbbjkkfndiokoiilgbklleon)   |
+| Color  | Firefox Screenshot | Firefox install link                                                        | Chrome Screenshot                                        | Chrome install link                                                                                    |
+| ------ | ------------------ | --------------------------------------------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Red    |                    | [:link:](https://addons.mozilla.org/en-US/firefox/addon/sober-dark-red/)    | [:camera:](./docs/images/sober-dark-red-overview.png)    | [:link:](https://chrome.google.com/webstore/detail/sober-dark-red/gfgeiigojblecjnfnldmmllcgcehjnbn)    |
+| Green  |                    | [:link:](https://addons.mozilla.org/en-US/firefox/addon/sober-dark-green/)  | [:camera:](./docs/images/sober-dark-green-overview.png)  | [:link:](https://chrome.google.com/webstore/detail/sober-dark-green/necamokhombbnmeppbamhpehidknemmn)  |
+| Blue   |                    | [:link:](https://addons.mozilla.org/en-US/firefox/addon/sober-dark-blue/)   | [:camera:](./docs/images/sober-dark-blue-overview.png)   | [:link:](https://chrome.google.com/webstore/detail/sober-dark-blue/enmlfpdgmgdklooblhdiebljnoappppd)   |
+| Yellow |                    | [:link:](https://addons.mozilla.org/en-US/firefox/addon/sober-dark-yellow/) | [:camera:](./docs/images/sober-dark-yellow-overview.png) | [:link:](https://chrome.google.com/webstore/detail/sober-dark-yellow/ccpeaemokpnhbakiakpagpfbdciippgd) |
+| Orange |                    | [:link:](https://addons.mozilla.org/en-US/firefox/addon/sober-dark-orange/) | [:camera:](./docs/images/sober-dark-orange-overview.png) | [:link:](https://chrome.google.com/webstore/detail/sober-dark-orange/edlmpfoknljlbkacifdhobhfkpkmimoj) |
+| Purple |                    | [:link:](https://addons.mozilla.org/en-US/firefox/addon/sober-dark-purple/) | [:camera:](./docs/images/sober-dark-purple-overview.png) | [:link:](https://chrome.google.com/webstore/detail/sober-dark-purple/kccbjmbbfhipiopncjjbmcbcmeedbhmp) |
+| Steel  |                    | [:link:](https://addons.mozilla.org/en-US/firefox/addon/sober-dark-steel/)  | [:camera:](./docs/images/sober-dark-steel-overview.png)  | [:link:](https://chrome.google.com/webstore/detail/sober-dark-steel/gpdhdegbjmloegcnmkjniljppajbnmdk)  |
+| Pink   |                    | [:link:](https://addons.mozilla.org/en-US/firefox/addon/sober-dark-pink/)   | [:camera:](./docs/images/sober-dark-pink-overview.png)   | [:link:](https://chrome.google.com/webstore/detail/sober-dark-pink/agnmpjjinbbjkkfndiokoiilgbklleon)   |
 
 ## Browser requirements
 

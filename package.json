@@ -1,16 +1,17 @@
 {
-  "name": "chrome-sober-themes",
-  "version": "1.1.0",
-  "description": "Chrome sober themes, with multiple colors to recognize your profiles at a glance",
+  "name": "sober-browser-themes",
+  "version": "2.0.0",
+  "description": "Sober browser themes, with multiple colors to recognize your profiles at a glance",
   "private": true,
   "scripts": {
     "build": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/quilicicf/ChromeSoberThemes.git"
+    "url": "git+https://github.com/quilicicf/sober-browser-themes.git"
   },
   "keywords": [
+    "firefox",
     "chrome",
     "theme",
     "sober",
@@ -19,13 +20,12 @@
   "author": "quilicicf <quilicicf@gmail.com> (https://github.com/quilicicf)",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/quilicicf/ChromeSoberThemes/issues"
+    "url": "https://github.com/quilicicf/sober-browser-themes/issues"
   },
-  "homepage": "https://github.com/quilicicf/ChromeSoberThemes#readme",
+  "homepage": "https://github.com/quilicicf/sober-browser-themes",
   "devDependencies": {
     "buffer-replace": "1.0.0",
     "color": "3.1.2",
-    "deepmerge": "4.0.0",
     "lodash": "4.17.15",
     "pn": "1.1.0",
     "svg2png": "4.1.1",

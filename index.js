@@ -15,11 +15,11 @@ const { DIST_FOLDER } = require('./lib/constants');
 const generateFirefoxManifest = require('./lib/firefox/generateFirefoxManifest');
 const generateChromeManifest = require('./lib/chrome/generateChromeManifest');
 
-const writeInDist = async ({ colorName, hexColor, chromeManifest, firefoxManifest }) => {
+const writeInDist = async ({ colorName, hexColor, chromeManifest, chromeFolderName, firefoxManifest, firefoxFolderName }) => {
   const promises = _(
     [
-      { folderName: `chrome-sober-${colorName}-theme`, manifest: chromeManifest, shouldAddIcons: true },
-      { folderName: `firefox-sober-${colorName}-theme`, manifest: firefoxManifest, shouldAddIcons: false },
+      { folderName: chromeFolderName, manifest: chromeManifest, shouldAddIcons: true },
+      { folderName: firefoxFolderName, manifest: firefoxManifest, shouldAddIcons: false },
     ])
     .map(({ folderName, manifest, shouldAddIcons }) => {
       const targetFolderPath = resolvePath(DIST_FOLDER, folderName);

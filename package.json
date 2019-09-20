@@ -4,7 +4,8 @@
   "description": "Sober browser themes, with multiple colors to recognize your profiles at a glance",
   "private": true,
   "scripts": {
-    "build": "node index.js"
+    "build": "node index.js",
+    "sreens": "node lib/screenshots/takeAndResizeScreenshots.js"
   },
   "repository": {
     "type": "git",

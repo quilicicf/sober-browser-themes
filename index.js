@@ -4,8 +4,6 @@ const _ = require('lodash');
 const { resolve: resolvePath } = require('path');
 const { writeFileSync } = require('fs');
 
-const packageFile = require('./package');
-
 const zipTheme = require('./lib/zipTheme');
 const generateIcons = require('./lib/generateIcons');
 const reCreateDir = require('./lib/reCreateDir');
@@ -15,7 +13,7 @@ const { DIST_FOLDER } = require('./lib/constants');
 const generateFirefoxManifest = require('./lib/firefox/generateFirefoxManifest');
 const generateChromeManifest = require('./lib/chrome/generateChromeManifest');
 
-const writeInDist = async ({ colorName, hexColor, chromeManifest, chromeFolderName, firefoxManifest, firefoxFolderName }) => {
+const writeInDist = async ({ version, colorName, hexColor, chromeManifest, chromeFolderName, firefoxManifest, firefoxFolderName }) => {
   const promises = _(
     [
       { folderName: chromeFolderName, manifest: chromeManifest, shouldAddIcons: true },
@@ -28,7 +26,7 @@ const writeInDist = async ({ colorName, hexColor, chromeManifest, chromeFolderNa
       writeFileSync(targetManifestPath, JSON.stringify(manifest, null, 2), 'utf8');
 
       const iconsGenerator = shouldAddIcons ? generateIcons(hexColor, targetFolderPath) : Promise.resolve();
-      return iconsGenerator.then(() => zipTheme(colorName, targetFolderPath, packageFile.version));
+      return iconsGenerator.then(() => zipTheme(colorName, targetFolderPath, version));
     })
     .flatten()
     .value();
@@ -38,7 +36,7 @@ const writeInDist = async ({ colorName, hexColor, chromeManifest, chromeFolderNa
 
 reCreateDir(DIST_FOLDER);
 
-_(getVariations(packageFile.version))
+_(getVariations())
   .map(variation => ({
     ...variation,
     chromeManifest: generateChromeManifest(variation),

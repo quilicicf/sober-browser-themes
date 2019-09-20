@@ -31,7 +31,7 @@ This is a repository containing the source code for the creation of the sober da
 
 They look like this:
 
-![Blue variation](./docs/images/sober-dark-blue-overview_small.jpg)
+![Blue variation](./docs/images/sober-dark-blue-overview_small.png)
 
 ### All variations
 

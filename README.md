@@ -77,9 +77,10 @@ I created a simple theme that looks a lot like [Morpheon dark](https://chrome.go
 ## TODO list
 
 * [x]&#x3A; Release to the Chrome store
-* [ ]&#x3A; Release to Firefox's AMO
-* [ ]&#x3A; Write release script (requires taking screenshots, might never be done)
-* [ ]&#x3A; Automatize the release process
+* [x]&#x3A; Release to Firefox's AMO
+* [x]&#x3A; Write release script - take screenshots (part I Chrome)!
+* [ ]&#x3A; Write release script - take screenshots (part II FF)!
+* [ ]&#x3A; Automatize the release process (push to stores)
 
 ## Want to fiddle with it?
 

@@ -18,6 +18,8 @@
 
 * [TODO list](#todo-list)
 
+* [Changelog](#changelog)
+
 * [Want to fiddle with it?](#want-to-fiddle-with-it)
 
   * [Firefox](#firefox)
@@ -81,6 +83,13 @@ I created a simple theme that looks a lot like [Morpheon dark](https://chrome.go
 * [x]&#x3A; Write release script - take screenshots (part I Chrome)!
 * [ ]&#x3A; Write release script - take screenshots (part II FF)!
 * [ ]&#x3A; Automatize the release process (push to stores)
+
+## Changelog
+
+* __2.0.0:__
+  * Add Firefox theme
+  * Make current tab stand out more on Chrome
+* __1.0.0:__ First version
 
 ## Want to fiddle with it?
 

@@ -27,7 +27,7 @@
   "devDependencies": {
     "buffer-replace": "1.0.0",
     "color": "3.1.2",
-    "lodash": "4.17.15",
+    "lodash": "4.17.19",
     "pn": "1.1.0",
     "sharp": "0.23.0",
     "svg2png": "4.1.1",
